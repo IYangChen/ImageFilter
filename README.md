@@ -1,8 +1,8 @@
-#Image Classification Filter for WEKA
+# Image Classification Filter for WEKA
 
 Steps required to perform image classification in WEKA:
 
-###1. Install the Image Filters Package
+### 1. Install the Image Filters Package
 
 Run WEKA, and from the GUI menu, select Tools—>Package Manager.
 
@@ -10,7 +10,7 @@ When the Package Manager appears, find the package “imageFilters” in the lis
 
 Restart WEKA.
 
-###2. Download some images
+### 2. Download some images
 
 You need to put all your images in the *same directory*.
 
@@ -18,7 +18,7 @@ For example, if you look into the imageFilter’s data directory,
 there is a directory called butterfly_vs_owl with one hundred images. 
 Fifty of those images depict monarch butterflies; Fifity are images of owls.
 
-###3. Create an ARFF file containing the image labels
+### 3. Create an ARFF file containing the image labels
 
 WEKA needs to have information about the images and their class labels encoded in an ARFF file.
 
@@ -41,7 +41,7 @@ owl003.jpg,OWL
 owl004.jpg,OWL
 ```` 
 
-###4. Filter the images in the WEKA GUI
+### 4. Filter the images in the WEKA GUI
 
 Open your ARFF file in the WEKA Explorer. If you are using the [butterfly_vs_owl.arff](https://github.com/mmayo888/ImageFilter/blob/master/data/butterfly_vs_owl/butterfly_vs_owl.arff) example, you will see that is contains two attributes: filename and class.
 
@@ -57,7 +57,7 @@ If WEKA can find all the image files and there are no other errors, then you sho
 
 Congratulations, you have just filtered an image dataset!
 
-###5. Run an experiment in the WEKA GUI
+### 5. Run an experiment in the WEKA GUI
 
 You can now save the filtered dataset as a normal WEKA ARFF file (preferably with a different name to the original ARFF, e.g. butterfly_vs_owl_features.arff) and run experiments as normal in WEKA.
 
@@ -65,7 +65,7 @@ You will probably need to remove the filename attribute first, however, as strin
 
 A second, harder image classification dataset concerned with distinguishing between three different types of vehicle is also available in the package’s data directory.
 
-###6. Running image filters from the command line
+### 6. Running image filters from the command line
 
 All of the image filters can be run easily from the command line.
 You need to provide several things on the command line, namely:
@@ -82,7 +82,7 @@ java -cp classpath_to_weka weka.filters.unsupervised.instance.imagefilter.PHOGFi
 java -cp classpath_to_weka weka.filters.unsupervised.attribute.RemoveType -T string -i features.arff -o features_nostrings.arff
 ````
 
-###Sources & References:
+### Sources & References:
 * LIRE 0.9.5 https://code.google.com/p/lire/
 * WEKA 3.7.12 http://www.cs.waikato.ac.nz/ml/weka/
 * Butterfly & birds images http://www-cvr.ai.uiuc.edu/ponce_grp/data/
